@@ -1,0 +1,60 @@
+<!-- StarCatcher Game for David's Soft Dev class 2015-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Starblaster</title>
+<!--    our link to the javascript file that will control the game actions -->
+    <script type="text/javascript" src="sbScripts.js"></script>
+<!--    out styles will be internal until we need to move them to an external file -->
+    <style type="text/css">
+        html, body {margin: 5px; background: royalblue;}
+        canvas {display: block}
+        #game {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1150px;
+            height: 600px;
+            background-image: url("images/background.PNG");
+            border-radius: 10px;
+            z-index: 1;
+            overflow: hidden;
+        }
+        #pLivesBoard {
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            margin-top: -35px;
+            margin-left: 300px;
+            z-index: 2;
+            float: left;
+        }
+        #pKilledBoard {
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            margin-top: -35px;
+            margin-right: 300px;
+            z-index: 2;
+            float: right;
+        }
+        .centerText {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+}    
+    </style>
+</head>
+<body>
+    <h3 class="centerText"><span id="levelText">Level 1</span></h2>
+    <div id="livesBoard">
+        <p id="pLivesBoard">Lives: <span id="sLives">5</span></p>
+        <p id="pKilledBoard">Kill Count: <span id="sKillCount">0</span></p>
+    </div>
+    <div id="game">
+        <canvas id="myCanvas">
+            <img src="images/starship.png" id="playerShip">
+        </canvas>
+    </div>
+</body>
+</html>
