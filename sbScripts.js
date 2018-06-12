@@ -229,8 +229,8 @@ function keepInWindow(object) {
 
 function checkCollision(object1, object2) {
 	//checks collision with one object and another
-	if ((object1.x < object2.x + (object2.width / 2)) && (object1.x + (object1.width / 2) > object2.x) && 
-		(object1.y < object2.y + (object2.height / 2)) && (object1.y + (object1.height / 2) > object2.y)) {
+	if ((object1.x < object2.x + (object2.width / 3)) && (object1.x + (object1.width / 3) > object2.x) && 
+		(object1.y < object2.y + (object2.height / 3)) && (object1.y + (object1.height / 3) > object2.y)) {
 		//we're touching
 		return true;
 	}	
